@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tools",
+  "info": {
+    "name": "Tools",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "icon": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "tools_category": {
+      "model": "tools-categories",
+      "via": "tools"
+    }
+  }
+}
